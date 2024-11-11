@@ -1,0 +1,233 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: "Roboto", serif;
+    height: 100%;
+    width: 100%;
+    max-width: 1920px;
+    overflow-x: hidden;
+    color: #1E1E1E;
+    background-color: #eeeeee;
+    font-size: 16px;
+}
+
+/*...................................header........................................*/
+header {
+    max-height: 13rem;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    background-color: rgb(255, 224, 166);
+    align-items: center;
+}
+
+/*Navbar meny*/
+
+nav {
+    padding: 1rem;
+}
+
+.navbar {
+    height: 9rem;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+    z-index: 5;
+    list-style: none;
+}
+
+nav li {
+    padding: 1rem;
+}
+
+nav li a {
+    width: 100%;
+    text-decoration: none;
+    color: #1E1E1E;
+    font-size: 2rem;
+    white-space: nowrap;
+    font-weight: 600;
+}
+
+.nav-link {
+    width: 100%;
+    color: #1E1E1E;
+}
+
+
+.nav-link:hover {
+    border-bottom: 0.3rem solid #1E1E1E;
+}
+
+#active {
+    border-bottom: 0.3rem solid #1E1E1E;
+}
+
+/*Meny text och hamburgarmeny*/
+
+/*Hamburgarmeny*/
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+/*streck till hamburgar meny*/
+.bar {
+    display: block;
+    width: 2.5rem;
+    height: 0.3rem;
+    margin: 0.5rem auto;
+    transition: all 0.3s ease-in-out;
+    background-color: #1E1E1E;
+}
+
+.menu-text {
+    font-size: 2rem;
+    color: #1E1E1E;
+    position: absolute;
+    right: 5rem;
+    display: none;
+    margin-left: 2rem;
+}
+
+
+/*logotyp*/
+.logotyp {
+    padding: 1rem;
+    max-width: fit-content;
+    height: fit-content;
+}
+
+.logotyp img {
+    max-width: 15rem;
+    width: 100%;
+    height: auto;
+}
+
+
+
+/*......................................Skärmbredd under 800px.......................................*/
+
+@media screen and (max-width:800px) {
+
+    /*......................................hamburger menu.......................................*/
+    .hamburger {
+        display: block;
+        position: absolute;
+        right: 2rem;
+        z-index: 20;
+    }
+
+    .menu-text {
+        display: block;
+        font-weight: 600;
+        z-index: 20;
+    }
+
+
+    /*Transform bars to cross*/
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(0.8rem) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-0.8rem) rotate(-45deg);
+    }
+
+    .navbar {
+        height: 0;
+        align-items: center;
+    }
+
+    /*Navbar dropdown*/
+    .nav-menu {
+        position: fixed;
+        right: 0;
+        opacity: 0;
+        top: 0;
+        gap: 0;
+        flex-direction: column;
+        background-color: rgb(255, 224, 166);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        height: 100%;
+        justify-content: flex-start;
+        padding-top: 15rem;
+        z-index: 19;
+    }
+
+    .nav-item {
+        display: inline;
+        width: 100%;
+    }
+
+    nav li {
+        padding: 3rem;
+    }
+
+    .nav-active {
+        background-color: #ffffff;
+    }
+
+    nav li a {
+        font-size: 2.8rem;
+    }
+
+    /*aktiv nav-sida i menyn*/
+    #active {
+        border-bottom: none;
+    }
+
+    .nav-menu.active {
+        right: 0rem;
+        opacity: 1;
+    }
+
+    .nav-item:hover {
+        border-bottom: 0;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    #nav-global-active {
+        background-color: #DBD9D9;
+        width: 100%;
+        max-width: 100%;
+        border-bottom: none;
+    }
+
+    #nav-global-active a,
+    .nav-item .nav-link i {
+        color: #1E1E1E;
+    }
+
+    #nav-global-active i {
+        color: #1E1E1E;
+    }
+
+    .nav-item i {
+        transform: scale(2);
+        margin-bottom: 2rem;
+    }
+}

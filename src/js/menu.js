@@ -1,0 +1,36 @@
+"use strict";
+
+//Hämta element från HTML
+const hamburgerEl = document.querySelector(".hamburger");
+const navMenuEl = document.querySelector(".nav-menu");
+
+//Eventlistener för toggla menyn
+if(hamburgerEl) {
+hamburgerEl.addEventListener("click", toggleMenu);
+}
+
+//Aktivera klass för hamburgermenyn
+function toggleMenu() {
+    hamburgerEl.classList.toggle("active");
+    navMenuEl.classList.toggle("active");
+
+    // Toggle meny text
+    const menuTextEl = document.querySelector(".menu-text");
+    if (menuTextEl.innerHTML === "Meny") {
+        menuTextEl.innerHTML = "Stäng";
+    } else {
+        menuTextEl.innerHTML = "Meny";
+    }
+
+    //Kalla på funktion för klick på länk
+    closeDropDown();
+}
+
+
+//vid klick på länk ska dropdown meny stängas
+function closeDropDown() {
+    const linksEl = document.querySelectorAll(".nav-link");
+    for (let i = 0; i < linksEl.length; i++) {
+        linksEl[i].addEventListener("click", toggleMenu);
+    }
+}

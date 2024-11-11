@@ -1,0 +1,18 @@
+{
+  "name": "moment1",
+  "version": "1.0.0",
+  "description": "",
+  "source": "src/index.html",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build"
+  },
+  "author": "Hanin",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.12.0"
+  },
+  "dependencies": {
+    "browserslist": "defaults and fully supports es6-module, maintained node versions"
+  }
+}
