@@ -1,0 +1,24 @@
+main {
+    max-width: 800px;
+}
+
+p {
+    max-width: 55ch;
+}
+
+form {
+    max-width: 500px;
+}
+
+.logotyp img {
+    max-width: 150px;
+}
+
+.form-age-select {
+    max-width: fit-content;
+}
+
+
+.bg-light-blue {
+    background-color: #cee1f3;
+}
