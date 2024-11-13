@@ -5,8 +5,8 @@ const hamburgerEl = document.querySelector(".hamburger");
 const navMenuEl = document.querySelector(".nav-menu");
 
 //Eventlistener för toggla menyn
-if(hamburgerEl) {
-hamburgerEl.addEventListener("click", toggleMenu);
+if (hamburgerEl) {
+    hamburgerEl.addEventListener("click", toggleMenu);
 }
 
 //Aktivera klass för hamburgermenyn
@@ -30,7 +30,8 @@ function toggleMenu() {
 //vid klick på länk ska dropdown meny stängas
 function closeDropDown() {
     const linksEl = document.querySelectorAll(".nav-link");
-    for (let i = 0; i < linksEl.length; i++) {
-        linksEl[i].addEventListener("click", toggleMenu);
-    }
+
+    linksEl.forEach((link) => {
+        link.addEventListener("click", toggleMenu);
+    })
 }
