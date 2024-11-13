@@ -5,9 +5,8 @@ const hamburgerEl = document.querySelector(".hamburger");
 const navMenuEl = document.querySelector(".nav-menu");
 
 //Eventlistener för toggla menyn
-if (hamburgerEl) {
-    hamburgerEl.addEventListener("click", toggleMenu);
-}
+hamburgerEl.addEventListener("click", toggleMenu);
+
 
 //Aktivera klass för hamburgermenyn
 function toggleMenu() {
