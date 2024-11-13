@@ -38,15 +38,52 @@
 
     </header>
     <main class="mx-auto w-100">
-        <h1 class="px-4 pt-4 mb-4">Bootstrap ramverk</h1>
-        <article class="bg-white p-4 shadow-sm">
-            <p>En undersida med information om ramverket, med länk till ramverkets webbplats.
-                Beskriv vad du tycker är bra med ramverket, och om det finns några saker du tycker är mindre bra.
-                Tabell med minst fyra fält, och minst fem rader med data.
-                Formulär för att lägga till data.</p>
-        </article>
+        <div class="container">
+            <div class="row">
+                <h1 class="px-4 pt-4 mb-4 col">Bootstrap ramverk</h1>
+            </div>
+            <div class="row">
+                <article class="col bg-white p-4 shadow-sm mb-3">
+                    <h2>Information</h2>
+                    <p>En undersida med information om ramverket, med länk till ramverkets webbplats.
+                        Beskriv vad du tycker är bra med ramverket, och om det finns några saker du tycker är mindre bra.
+                        Tabell med minst fyra fält, och minst fem rader med data.
+                        Formulär för att lägga till data.</p>
+                </article>
 
-        <form class=" p-3 w-100 bg-light-blue mt-5">
+                <aside class="col bg-white p-4 shadow-sm mb-3">
+                    <h4>Länk till Bootstrap</h4>
+                    <a href="https://getbootstrap.com/" target="_blank">Bootstrap</a>
+                </aside>
+            </div>
+        </div>
+
+        <div class="d-flex">
+            <article class="bg-white p-4 shadow-sm flex-fill">
+                <h3>Fördelar</h3>
+                <ul>
+                    <li>Går väldigt fort att sätta upp.</li>
+                    <li>Mycket mindre CSS kod, mer beroende av klasser.</li>
+                    <li>Responsiv och anpassningsbar, utan behov av media queries i CSS.</li>
+                    <li>Mindre manuellt arbete.</li>
+                    <li>Fördelaktig under utveckling av webbplats med liten tidspan.</li>
+                </ul>
+            </article>
+
+            <article class="bg-white p-4 shadow-sm flex-fill">
+                <h3>Nackdelar</h3>
+                <ul>
+                    <li>Mindre kontroll.</li>
+                    <li>Ser opersonligt ut och stor risk att webbplatsen förlorar sin unika identitet, typiskt bootstrap "look".</li>
+                    <li>Kan bli många klasser under samma rad.</li>
+                    <li>Många klassnamn att memorera, behövs ständig kontroll med dokumentation.</li>
+                    <li>Tar tid att lära sig arbetssättet.</li>
+                    <li>Mindre flexibelt för att göra större ändringar.</li>
+                </ul>
+            </article>
+        </div>
+
+        <form class=" p-3 w-100 bg-light-blue mt-5 mx-auto shadow-sm">
             <h3>Formulär</h3>
             <div class="mb-3">
                 <label for="name" class="form-label">Namn</label>
@@ -73,44 +110,79 @@
             </div>
             <div class="mb-3">
                 <label class="form-check-label" for="job">Jobb</label>
-                <input type="text" class="form-control" id="job">
+                <textarea type="text" class="form-control" id="job">
             </div>
+
+            <div class="mb-3">
+                <input type="checkbox" class="form-check-input p-2" id="checkbox-accept">
+                <label for="checkbox-accept" class="form-check-label">Godkänna villkor</label>
+            </div>
+
             <div class="d-flex w-100 gap-4">
                 <button type="submit" class="btn btn-primary flex-fill">Skicka</button>
                 <button type="reset" class="btn btn-secondary flex-fill">Ångra</button>
             </div>
         </form>
 
-        <table class="table table-striped table-hover table-responsive-sm">
-            <thead>
-                <tr>
-                    <th scope="col"></th>
-                    <th scope="col">Namn</th>
-                    <th scope="col">E-post</th>
-                    <th scope="col">Ålder</th>
-                    <th scope="col">Utbildning</th>
-                    <th scope="col">Jobb</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Josefin Andersson</td>
-                    <td>josse95@gmail.com</td>
-                    <td>26-35</td>
-                    <td>Interaktionsdesign</td>
-                    <td>UX-designer</td>
-                </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td>Markus Dahl</td>
-                    <td>markdahl@gmail.com</td>
-                    <td>26-35</td>
-                    <td>Webbutveckling</td>
-                    <td>Backend-utvecklare</td>
-                </tr>
-            </tbody>
-        </table>
+
+
+
+        <div class="table-responsive shadow-sm mt-5 mb-5">
+            <table class="table table-hover mb-0">
+                <thead>
+                    <tr>
+                        <th scope="col"></th>
+                        <th scope="col">Namn</th>
+                        <th scope="col">E-post</th>
+                        <th scope="col">Ålder</th>
+                        <th scope="col">Utbildning</th>
+                        <th scope="col">Jobb</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Josefin Andersson</td>
+                        <td>josse95@gmail.com</td>
+                        <td>26-35</td>
+                        <td>Interaktionsdesign</td>
+                        <td>UX-designer</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Markus Dahl</td>
+                        <td>markdahl@gmail.com</td>
+                        <td>46-55</td>
+                        <td>Webbutveckling</td>
+                        <td>Senior backend-utvecklare</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>Maria Lopez</td>
+                        <td>marialo@hotmail.com</td>
+                        <td>36-45</td>
+                        <td>Fullstackutbildning</td>
+                        <td>Systemarkitekt</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">4</th>
+                        <td>Daniel Svensson</td>
+                        <td>danisven@hotmail.com</td>
+                        <td>18-25</td>
+                        <td>Ingen</td>
+                        <td>It-support</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">5</th>
+                        <td>Hanin Farhan</td>
+                        <td>haninfarhan@hotmail.com</td>
+                        <td>26-35</td>
+                        <td>Webbutveckling</td>
+                        <td>Frontend developer</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
