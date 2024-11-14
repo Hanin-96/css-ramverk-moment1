@@ -1,0 +1,7 @@
+/* Table color */
+.table-stripes tbody tr:nth-child(odd) {
+    background-color: #a5b4fc; /* Tailwind gray */
+  }
+.table-stripes  tbody tr:nth-child(even) {
+    background-color: #eef2ff; /* Tailwind white */
+  }

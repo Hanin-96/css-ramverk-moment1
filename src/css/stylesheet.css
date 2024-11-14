@@ -30,7 +30,7 @@ header {
     align-items: baseline;
 }
 
-/*Navbar meny*/
+/*Navbar menu*/
 
 nav {
     width: 100%;
@@ -74,7 +74,7 @@ nav li a {
     font-weight: 500;
 }
 
-/*Meny text och hamburgarmeny*/
+/*Menu text for hamburgarmenu*/
 
 /*Hamburgarmeny*/
 .hamburger {
@@ -82,7 +82,7 @@ nav li a {
     cursor: pointer;
 }
 
-/*streck till hamburgar meny*/
+/*lines for hamburgar menu*/
 .bar {
     display: block;
     width: 2.5rem;
@@ -102,7 +102,7 @@ nav li a {
 }
 
 
-/*logotyp*/
+/*logotype*/
 .logotyp {
     padding: 2rem;
     max-width: fit-content;
@@ -146,7 +146,7 @@ h2 {
 }
 
 
-/*......................................Skärmbredd under 800px.......................................*/
+/*......................................screen under 800px.......................................*/
 
 @media screen and (max-width:800px) {
 
@@ -179,6 +179,10 @@ h2 {
         transform: translateY(0) rotate(-45deg);
     }
 
+    nav {
+        height: 5rem;
+    }
+
     .navbar {
         height: 0;
         align-items: center;
@@ -198,7 +202,7 @@ h2 {
         transition: 0.3s;
         height: 100%;
         justify-content: flex-start;
-        padding-top: 15rem;
+        padding-top: 20rem;
         z-index: 19;
         display: none;
         animation: 0.3s linear navAnimation;
@@ -232,7 +236,7 @@ h2 {
         font-size: 2.8rem;
     }
 
-    /*aktiv nav-sida i menyn*/
+    /*active nav-page in menu*/
     .nav-menu.active {
         right: 0rem;
         opacity: 1;
