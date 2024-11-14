@@ -21,21 +21,22 @@ body {
 
 /*...................................header........................................*/
 header {
-    max-height: 13rem;
     height: 100%;
     width: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    position: fixed;
     background-color: rgb(210, 210, 210);
-    align-items: center;
-    box-shadow: 0px 5px 10px -2px rgba(0, 0, 0, 0.1);
+    align-items: baseline;
 }
 
 /*Navbar meny*/
 
 nav {
+    width: 100%;
     padding: 1rem;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 5px 10px -2px rgba(0, 0, 0, 0.1);
 }
 
 .navbar {
@@ -43,6 +44,7 @@ nav {
     display: flex;
     justify-content: right;
     align-items: center;
+    width: 100%;
 }
 
 .nav-menu {
@@ -58,25 +60,18 @@ nav li {
 }
 
 nav li a {
-    width: 100%;
     text-decoration: none;
     color: #1E1E1E;
     font-size: 1.6rem;
     white-space: nowrap;
 }
 
-.nav-link {
-    width: 100%;
-    color: #1E1E1E;
-}
-
-
-.nav-link:hover {
-    font-weight: bold;
+.nav-item:hover {
+    font-weight: 500;
 }
 
 #active {
-    font-weight: bold;
+    font-weight: 500;
 }
 
 /*Meny text och hamburgarmeny*/
@@ -121,8 +116,7 @@ nav li a {
 }
 
 main {
-    padding-top: 15rem;
-    padding: 15rem 2rem 2rem 2rem;
+    padding: 2rem;
     max-width: 800px;
     width: 100%;
     margin: 0 auto;

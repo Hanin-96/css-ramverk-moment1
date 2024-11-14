@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CSS ramverk tester">
+    <title>Bootstrap</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'purple-dark': '#4b368f'
+                    },
+                    width: {
+                    '800px': '800px',
+                    '55ch': '55ch',
+                }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <header class="shadow-lg">
+        <div class="fill-current bg-purple-dark w-full p-3">
+            <a href="index.html">
+                <img src="img/logotypwhite.svg" alt="logotyp" class="max-w-40 h-auto">
+            </a>
+        </div>
+        <nav>
+            <div>
+                <div id="navbarNav">
+                    <ul class="flex">
+                        <li class="nav-item p-3"><a href="index.html">Hem</a></li>
+                        <li class="nav-item p-3"><a href="bootstrap.html">Bootstrap</a></li>
+                        <li class="nav-item p-3"><a href="tailwind.html">Tailwind</a></li>
+                        <li class="nav-item p-3"><a href="publicering.html">Publicering</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+    <main class="p-3 mx-auto w-800px">
+        <div>
+            <div>
+                <h1 class="text-4xl font-medium	p-1 mb-4 mt-4"><i class="bi bi-bootstrap-fill me-2 text-primary"></i>Tailwind ramverk</h1>
+            </div>
+            <div class="p-4 bg-indigo-200 flex drop-shadow-md gap-8">
+                <article>
+                    <h2 class="text-3xl mb-2">Information</h2>
+                    <p class="w-55ch">En undersida med information om ramverket, med länk till ramverkets webbplats.
+                        Beskriv vad du tycker är bra med ramverket, och om det finns några saker du tycker är mindre bra.
+                        Tabell med minst fyra fält, och minst fem rader med data.
+                        Formulär för att lägga till data.</p>
+                </article>
+
+                <aside class="bg-white p-2">
+                    <h4>Länk till Tailwind</h4>
+                    <button>
+                        <a href="https://getbootstrap.com/" target="_blank">
+                            <i class="bi bi-box-arrow-up-right text-light fs-2"></i>
+                        </a>
+                    </button>
+
+                </aside>
+            </div>
+        </div>
+
+        <div>
+            <article>
+                <h3>Fördelar</h3>
+                <ul>
+                    <li>Går väldigt fort att sätta upp.</li>
+                    <li>Mycket mindre CSS kod, mer beroende av klasser.</li>
+                    <li>Responsiv och anpassningsbar, utan behov av media queries i CSS.</li>
+                    <li>Mindre manuellt arbete.</li>
+                    <li>Fördelaktig under utveckling av webbplats med liten tidspan.</li>
+                    <li>Mycket smidigare att placera ut ikoner.</li>
+                </ul>
+            </article>
+
+            <article>
+                <h3>Nackdelar</h3>
+                <ul>
+                    <li>Mindre kontroll.</li>
+                    <li>Ser opersonligt ut och stor risk att webbplatsen förlorar sin unika identitet, typiskt bootstrap "look".</li>
+                    <li>Kan bli många klasser under samma rad.</li>
+                    <li>Många klassnamn att memorera, behövs ständig kontroll med dokumentation.</li>
+                    <li>Tar tid att lära sig arbetssättet.</li>
+                    <li>Mindre flexibelt för att göra större ändringar.</li>
+                </ul>
+            </article>
+        </div>
+
+        <form>
+            <h3>Formulär</h3>
+            <div>
+                <label for="name" class="form-label">Namn</label>
+                <input type="text" class="form-control" id="name">
+            </div>
+            <div>
+                <label for="email" class="form-label">E-post</label>
+                <input type="email" class="form-control" id="email">
+            </div>
+            <div>
+                <label for="age">Ålder</label>
+                <select name="age" id="age" class="form-select">
+                    <option value="18-25">18-24</option>
+                    <option value="26-35">26-35</option>
+                    <option value="36-45">36-45</option>
+                    <option value="46-55">46-55</option>
+                    <option value="56-65">56-65</option>
+                    <option value=">65">>65</option>
+                </select>
+            </div>
+            <div>
+                <label class="form-check-label" for="education">Utbildning</label>
+                <input type="text" class="form-control" id="education">
+            </div>
+            <div>
+                <label class="form-check-label" for="job">Jobb</label>
+                <textarea type="text" class="form-control" id="job">
+            </div>
+
+            <div>
+                <input type="checkbox" class="form-check-input p-2" id="checkbox-accept">
+                <label for="checkbox-accept" class="form-check-label">Godkänna villkor</label>
+            </div>
+
+            <div>
+                <button type="submit" class="btn btn-primary flex-fill">Skicka</button>
+                <button type="reset" class="btn btn-secondary flex-fill">Ångra</button>
+            </div>
+        </form>
+
+        <div>
+            <table>
+                <thead>
+                    <tr>
+                        <th scope="col"></th>
+                        <th scope="col">Namn</th>
+                        <th scope="col">E-post</th>
+                        <th scope="col">Ålder</th>
+                        <th scope="col">Utbildning</th>
+                        <th scope="col">Jobb</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Josefin Andersson</td>
+                        <td>josse95@gmail.com</td>
+                        <td>26-35</td>
+                        <td>Interaktionsdesign</td>
+                        <td>UX-designer</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Markus Dahl</td>
+                        <td>markdahl@gmail.com</td>
+                        <td>46-55</td>
+                        <td>Webbutveckling</td>
+                        <td>Senior backend-utvecklare</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>Maria Lopez</td>
+                        <td>marialo@hotmail.com</td>
+                        <td>36-45</td>
+                        <td>Fullstackutbildning</td>
+                        <td>Systemarkitekt</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">4</th>
+                        <td>Daniel Svensson</td>
+                        <td>danisven@hotmail.com</td>
+                        <td>18-25</td>
+                        <td>Ingen</td>
+                        <td>It-support</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">5</th>
+                        <td>Hanin Farhan</td>
+                        <td>haninfarhan@hotmail.com</td>
+                        <td>26-35</td>
+                        <td>Webbutveckling</td>
+                        <td>Frontend developer</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="6">
+                            Personer i IT branschen
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </main>
+</body>
+
+</html>
