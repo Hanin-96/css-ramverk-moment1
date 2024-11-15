@@ -36,6 +36,7 @@
                         <li class="nav-item p-3"><a href="index.html" class="hover:text-black text-slate-700">Hem</a></li>
                         <li class="nav-item p-3"><a href="bootstrap.html" class="hover:text-black text-slate-700">Bootstrap</a></li>
                         <li class="nav-item p-3"><a href="tailwind.html" class="font-medium">Tailwind</a></li>
+                        <li class="nav-item p-3"><a href="miligram.html" class="nav-link">Miligram</a></li>
                         <li class="nav-item p-3"><a href="publicering.html" class="hover:text-black text-slate-700">Publicering</a></li>
                     </ul>
                 </div>
@@ -43,7 +44,7 @@
         </nav>
 
     </header>
-    <div class="bg-slate-200">
+    <div class="bg-red-50">
         <main class="p-3 mx-auto max-w-800px w-full container">
             <div class="w-full">
                 <div>
@@ -60,10 +61,11 @@
 
                     <aside class="bg-white p-2 h-auto w-full">
                         <h4 class="text-2xl">Länk till Tailwind</h4>
+
                         <div class="relative">
-                            <input type="button" value="Länk" class="w-full p-1 bg-indigo-900 flex items-center justify-center p-4 mt-2 rounded-md hover:bg-indigo-950 text-white w-100">
-                            <a href="https://tailwindcss.com/" target="_blank" class="absolute top-1/2 right-3 transform -translate-y-1/2">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" class="size-6 scale-150">
+                            <input type="button" value="Länk" class="p-1 bg-indigo-900 p-4 mt-2 rounded-md hover:bg-indigo-950 text-white w-full cursor-pointer">
+                            <a href="https://tailwindcss.com/" target="_blank" class="absolute top-1/2 right-2 transform -translate-y-1/2">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" class="size-8">
                                     <path fill-rule="evenodd" d="M15.75 2.25H21a.75.75 0 0 1 .75.75v5.25a.75.75 0 0 1-1.5 0V4.81L8.03 17.03a.75.75 0 0 1-1.06-1.06L19.19 3.75h-3.44a.75.75 0 0 1 0-1.5Zm-10.5 4.5a1.5 1.5 0 0 0-1.5 1.5v10.5a1.5 1.5 0 0 0 1.5 1.5h10.5a1.5 1.5 0 0 0 1.5-1.5V10.5a.75.75 0 0 1 1.5 0v8.25a3 3 0 0 1-3 3H5.25a3 3 0 0 1-3-3V8.25a3 3 0 0 1 3-3h8.25a.75.75 0 0 1 0 1.5H5.25Z" clip-rule="evenodd" />
                                 </svg>
                             </a>
@@ -105,44 +107,44 @@
                 </div>
             </section>
 
-                <form class="mt-10 mb-10 w-auto bg-orange-200 drop-shadow-md p-3 max-w-fit mx-auto rounded-md">
-                    <h3 class="text-xl font-medium">Formulär</h3>
-                    <div class="p-2">
-                        <label for="name" class="block">Namn</label>
-                        <input type="text" class="w-full" id="name">
-                    </div>
-                    <div class="p-2">
-                        <label for="email" class="form-label">E-post</label>
-                        <input type="email" class="w-full" id="email">
-                    </div>
-                    <div class="p-2">
-                        <label for="age">Ålder</label>
-                        <select name="age" id="age" class="w-full">
-                            <option value="18-25">18-24</option>
-                            <option value="26-35">26-35</option>
-                            <option value="36-45">36-45</option>
-                            <option value="46-55">46-55</option>
-                            <option value="56-65">56-65</option>
-                            <option value=">65">>65</option>
-                        </select>
-                    </div>
-                    <div class="p-2">
-                        <label class="form-check-label" for="education">Utbildning</label>
-                        <input type="text" class="w-full" id="education">
-                    </div>
-                    <div class="p-2">
-                        <label for="job">Jobb</label>
-                        <textarea class="border border-slate-700 rounded-xl w-full" id="job">
+            <form class="mt-10 mb-10 w-auto bg-orange-200 drop-shadow-md p-3 max-w-xl mx-auto rounded-lg">
+                <h3 class="text-xl font-medium">Formulär</h3>
+                <div class="p-2">
+                    <label for="name" class="block">Namn</label>
+                    <input type="text" class="w-full p-1" id="name">
+                </div>
+                <div class="p-2">
+                    <label for="email" class="form-label">E-post</label>
+                    <input type="email" class="w-full p-1" id="email">
+                </div>
+                <div class="p-2">
+                    <label for="age">Ålder</label>
+                    <select name="age" id="age" class="w-min block p-1">
+                        <option value="18-25">18-24</option>
+                        <option value="26-35">26-35</option>
+                        <option value="36-45">36-45</option>
+                        <option value="46-55">46-55</option>
+                        <option value="56-65">56-65</option>
+                        <option value=">65">>65</option>
+                    </select>
+                </div>
+                <div class="p-2">
+                    <label class="form-check-label" for="education">Utbildning</label>
+                    <input type="text" class="w-full p-1" id="education">
+                </div>
+                <div class="p-2">
+                    <label for="job">Jobb</label>
+                    <textarea class="border border-slate-700 rounded-xl w-full p-1" id="job">
                 </div>
 
-            <div class="p-2">
-                <input type="checkbox" id="checkbox-accept" class="w-full">
-                <label for="checkbox-accept" class="block">Godkänna villkor</label>
+            <div>
+                <input type="checkbox" id="checkbox-accept" class="p-4 w-min">
+                <label for="checkbox-accept">Godkänna villkor</label>
             </div>
 
-            <div class="flex flex-wrap w-full">
-                <button type="submit" class="btn btn-primary flex-fill">Skicka</button>
-                <button type="reset" class="btn btn-secondary flex-fill">Ångra</button>
+            <div class="flex flex-wrap w-full md:flex-nowrap gap-2">
+                <button type="submit" class="bg-indigo-900 text-white p-2 w-full hover:bg-indigo-950 rounded-lg">Skicka</button>
+                <button type="reset" class="bg-red-300 p-2 w-full hover:bg-red-400 rounded-lg">Ångra</button>
             </div>
         </form>
 
