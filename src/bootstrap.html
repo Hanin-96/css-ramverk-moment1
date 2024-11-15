@@ -36,6 +36,7 @@
         </nav>
 
     </header>
+
     <main class="mx-auto w-100">
         <div class="container">
             <div class="row">
@@ -52,11 +53,13 @@
 
                 <aside class="col bg-white p-4 shadow-sm mb-3">
                     <h4>Länk till Bootstrap</h4>
-                    <button class="btn btn-primary w-100 mt-2">
-                        <a href="https://getbootstrap.com/" target="_blank">
-                            <i class="bi bi-box-arrow-up-right text-light fs-2"></i>
-                        </a>
-                    </button>
+
+                    <div class="position-relative">
+                            <input type="button" value="Länk" class="btn btn-primary w-100 mt-2 p-3 position-relative">
+                            <a href="https://getbootstrap.com/" target="_blank" class="position-absolute top-50 end-0 translate-middle-y me-3">
+                                <i class="bi bi-box-arrow-up-right text-light fs-4"></i>
+                            </a>
+                    </div>
 
                 </aside>
             </div>
@@ -115,7 +118,7 @@
             </div>
             <div class="mb-3">
                 <label class="form-check-label" for="job">Jobb</label>
-                <textarea type="text" class="form-control" id="job">
+                <textarea class="form-control" id="job">
             </div>
 
             <div class="mb-3 d-">
