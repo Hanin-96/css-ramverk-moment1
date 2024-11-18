@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CSS ramverk tester">
+    <title>Milligram</title>
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+
+    <!-- CSS Reset -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+
+    <!-- Milligram CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
+
+    <style>
+
+        .logo-bg {
+            background-color: #9b4dca;
+            padding: 2rem;
+        }
+
+        .navbar-list {
+            padding-bottom: 2rem;
+            padding-top: 2rem;
+            list-style: none;
+        }
+
+        .navbar-list li {
+            display: inline;
+        }
+
+        form {
+            padding: 1rem;
+            max-width: 800px;
+            width: 100%;
+            margin: 0 auto;
+            border: 1px solid #9b4dca;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        article {
+            padding: 1rem;
+        }
+
+        aside {
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        a {
+            display: block;
+        }
+
+        label {
+            display: inline;
+        }
+
+        table {
+            background-color: rgb(243, 242, 242);
+            padding: 1rem;
+            max-width: 800px;
+            width: 100%;
+            margin: 0 auto;
+        }
+        main {
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .row {
+            gap: 1rem;
+        }
+
+        .column {
+            background-color: rgb(243, 242, 242);
+        }
+
+        .container {
+            margin-bottom: 2rem;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <div class="logo-bg">
+            <a href="index.html">
+                <img src="img/logotyp_white.svg" alt="logotyp" width="150">
+            </a>
+        </div>
+        <nav class="container">
+            <div>
+                <div id="navbarNav">
+                    <ul class="navbar-list">
+                        <li><a href="index.html" class="button button-outline">Hem</a></li>
+                        <li><a href="bootstrap.html" class="button button-outline">Bootstrap</a></li>
+                        <li><a href="tailwind.html" class="button button-outline">Tailwind</a></li>
+                        <li><a href="milligram.html" class="button button-outline">Milligram</a></li>
+                        <li><a href="publicering.html" class="button button-outline">Publicering</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+
+    <main>
+        <div class="container">
+            <div>
+                <h1>Milligram ramverk</h1>
+            </div>
+            <div class="row">
+                <article class="column">
+                    <h2>Information</h2>
+                    <p>Milligram ger en minimal uppsättning av css kod från start. Den är designat för att vara liten för bättre prestanda och högre produktivitet. Då den inte kräver klasser resulterar det i renare och kortare kod. </p>
+                </article>
+
+                <aside class="column">
+                    <h4>Länk till Milligram</h4>
+
+
+                    <a href="https://milligram.io/" target="_blank">
+                        Länk</a>
+
+
+                </aside>
+            </div>
+        </div>
+
+        <div class="container">
+            <article class="row">
+                <div class="column">
+                    <h3>Fördelar</h3>
+                    <ul>
+                        <li>Går väldigt fort att sätta upp.</li>
+                        <li>Mycket mindre CSS kod, allt är inbyggt.</li>
+                        <li>Responsiv och utan behov av media queries i CSS.</li>
+                        <li>Nästan inget manuellt arbete.</li>
+                        <li>Fördelaktig under utveckling av webbplats som demo.</li>
+                        <li>Enkelt att skriva över eller lägga till CSS kod när det behövs.</li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <h3>Nackdelar</h3>
+                    <ul>
+                        <li>Ser opersonligt ut och stor risk att webbplatsen förlorar sin unika identitet, typiskt Milligram "look".</li>
+                        <li>Inte särskilt användbart för publicering.</li>
+                        <li>Inte lika mycket funktionaliteter som Bootstrap och Tailwind.</li>
+                    </ul>
+                </div>
+            </article>
+
+        </div>
+
+        <form>
+            <h3>Formulär</h3>
+            <div>
+                <label for="name">Namn</label>
+                <input type="text" id="name">
+            </div>
+            <div>
+                <label for="email">E-post</label>
+                <input type="email" id="email">
+            </div>
+            <div>
+                <label for="age">Ålder</label>
+                <select name="age" id="age">
+                    <option value="18-25">18-24</option>
+                    <option value="26-35">26-35</option>
+                    <option value="36-45">36-45</option>
+                    <option value="46-55">46-55</option>
+                    <option value="56-65">56-65</option>
+                    <option value=">65">>65</option>
+                </select>
+            </div>
+            <div>
+                <label for="education">Utbildning</label>
+                <input type="text" id="education">
+            </div>
+            <div>
+                <label for="job">Jobb</label>
+                <textarea id="job">
+            </div>
+
+            <div>
+                <input type="checkbox"  id="checkbox-accept">
+                <label for="checkbox-accept" >Godkänna villkor</label>
+            </div>
+
+            <div>
+                <button type="submit" class="button button-primary">Skicka</button>
+                <button type="reset" >Ångra</button>
+            </div>
+        </form>
+
+        <div >
+            <table >
+                <thead>
+                    <tr>
+                        <th scope="col"></th>
+                        <th scope="col">Namn</th>
+                        <th scope="col">E-post</th>
+                        <th scope="col">Ålder</th>
+                        <th scope="col">Utbildning</th>
+                        <th scope="col">Jobb</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Josefin Andersson</td>
+                        <td>josse95@gmail.com</td>
+                        <td>26-35</td>
+                        <td>Interaktionsdesign</td>
+                        <td>UX-designer</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Markus Dahl</td>
+                        <td>markdahl@gmail.com</td>
+                        <td>46-55</td>
+                        <td>Webbutveckling</td>
+                        <td>Senior backend-utvecklare</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>Maria Lopez</td>
+                        <td>marialo@hotmail.com</td>
+                        <td>36-45</td>
+                        <td>Fullstackutbildning</td>
+                        <td>Systemarkitekt</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">4</th>
+                        <td>Daniel Svensson</td>
+                        <td>danisven@hotmail.com</td>
+                        <td>18-25</td>
+                        <td>Ingen</td>
+                        <td>It-support</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">5</th>
+                        <td>Hanin Farhan</td>
+                        <td>haninfarhan@hotmail.com</td>
+                        <td>26-35</td>
+                        <td>Webbutveckling</td>
+                        <td>Frontend developer</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="6" >
+                            Personer i IT branschen
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </main>
+</body>
+
+</html>
