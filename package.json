@@ -12,7 +12,9 @@
   "devDependencies": {
     "parcel": "^2.12.0"
   },
-  "dependencies": {
-    "browserslist": "defaults and fully supports es6-module, maintained node versions"
-  }
+    "browserslist":[
+      "defaults",
+      "supports es6-module",
+      "maintained node versions"
+    ]
 }
