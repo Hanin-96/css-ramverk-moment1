@@ -42,11 +42,6 @@
         <h1>Publicering</h1>
         <article class="start-text">
             <h2>Publicerings-plattform</h2>
-            <ul>
-                <li>Beskriv den publicerings-plattform du valt för att publicera dina webbplats.</li>
-                <li>Ta med saker som kod-stöd (vilka programmerings-språk som går att använda), kostnad, för- och nackdelar och andra saker du tycker är utmärkande.</li>
-                <li>Beskriv även hur arbetssättet är för att publicera arbetsfiler till denna webbhost.</li>
-            </ul>
 
             <p>Jag har gått igenom tre olika publicerings-plattformat som jag inte har testat tidigare: Github pages, Cloudflare och Vercel. Vercel verkade vara den som är enklast att deploya statisk webbplats med och är väldigt lik Netlify. Jag valde dock Cloudflare för att testa och lära mig publicera på så många publiceringsformat som möjligt.</p>
 
@@ -59,8 +54,10 @@
             <h4>Betalningsplan</h4>
             <p>Det finns både gratis plan och betalningsplan. Pro versionen kostar 20$/månad och business kostar 200$/månad. Pro och uppåt inkluderar mer komplexa funktionaliteter och verktyg såsom fler byggen, mer bandbredd och support. Gratis versionen är mer anpassad för personlig/hobby projekt.</p>
 
+            <br>
+
             <h4>För-och nackdelar</h4>
-            <p>Fördelarna är att Cloudflare stödjer olika språk och ramverk. Den erbjuder även snabb deployment och direkt integration med GitHub. Relativ enkel konfiguration och snabb prestanda</p>
+            <p>Fördelarna är att Cloudflare stödjer olika språk och ramverk. Den erbjuder även snabb deployment och direkt integration med GitHub. Relativ enkel konfiguration och snabb prestanda.</p>
             <br>
             <p>Nackdelen är att den har begränsad byggtid på gratisplan. Den var lite krångligare att sätta upp och tog längre tid att få upp. Kommer nog i kommande publiceringar köra med Vercel.</p>
 
@@ -71,10 +68,11 @@
                 <li>
                     I Cloudflare skapas ett gratis användarkonto och under sidan Workers & Pages i fliken Overview skapas ett nytt projekt.
                 </li>
-                <li>Därefter klickar man vidare på Create an application och skapar koppling till GitHuB via knappen Connect to Git</li>
+                <li>Därefter klickar man vidare på Create an application och skapar koppling till GitHuB via knappen Connect to Git.</li>
                 <li>Efter inloggning i GitHub väljs projektet.</li>
                 <li>Därefter klickar man vidare på Begin setup.</li>
-                <li>Här väljs production branch och hur den ska bygga. I det här fallet </li>
+                <li>Här väljs production branch och hur den ska bygga. I det här fallet valde jag main branch och npm run build under Build command. Webbplatsen är skapad med Parcel och därmed skrivs dist under Build output directory.</li>
+                <li>Sista steget är att trycka Save and Deploy. Vid lyckad deployment hostas webbplatsen på Cloudflare.</li>
             </ul>
         </article>
     </main>
